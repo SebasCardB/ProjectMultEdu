@@ -1,0 +1,27 @@
+/* Header.css */
+.header {
+    position: sticky;
+    background-color: #0d3b66;
+    color: #f1faee;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /*z-index: 1000;*/
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    color: #f1faee;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    color: #a8dadc;
+  }
+  
+  
