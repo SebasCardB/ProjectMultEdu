@@ -1,10 +1,10 @@
-// App.js
+// Main.jsx
 import React, { useState } from 'react';
-import Header from './Header';
-import './App.css';
+import { useNavigate } from 'react-router-dom';
 
-const App = () => {
+const Main = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+  const navigate = useNavigate();
 
   const menuOptions = {
     variables: [
@@ -64,18 +64,64 @@ const App = () => {
 
   const handleMenuItemClick = (item) => {
     console.log(`Seleccionaste: ${item}`);
+    
+    switch (item) {
+      case 'Variables de tipo numéricas':
+        navigate('/variables');    
+        break;
+      case 'Variables de texto':
+
+        break;
+      case 'Variables booleanas':
+
+        break;
+      case 'Suma':
+
+        break;
+      case 'Resta':
+
+        break;
+      case 'Multiplicación':
+
+        break;
+      case 'División':
+  
+        break;
+      case 'Ciclo For':
+
+        break;
+      case 'Ciclo While':
+
+        break;
+      case 'Ciclo Do While':
+
+        break;
+      case 'If':
+
+        break;
+      case 'Else':
+
+        break;
+      case 'Elif':
+
+        break;
+      case 'Switch':
+
+        break;
+      default:
+        console.log(`Opción no reconocida: ${item}`);
+    }
   };
 
   return (
-    <div className="app">
-      <Header />
+    <div className="main">
       <div className="main-content">
         <div className="sidebar">
           {Object.keys(descriptions).map((key) => (
             <button 
               key={key} 
               onClick={() => openMenu(key)} 
-              className={`menu-button ${activeMenu === key ? 'active' : ''}`} // Agrega la clase 'active' si está seleccionada
+              className={`menu-button ${activeMenu === key ? 'active' : ''}`}
             >
               <div className="icon">{descriptions[key].icon}</div>
               <div className="title">{descriptions[key].title}</div>
@@ -108,4 +154,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;

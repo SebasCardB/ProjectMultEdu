@@ -110,14 +110,13 @@
   font-weight: bold;
   text-align: left;
   border-radius: 20px;
-  width: 60%;
+  width: 40%;
   transition: background-color 0.3s;
   height: 8em;
   display: flex; /* Para alinear el texto y el ícono en la misma línea */
   align-items: center;
   justify-content: space-between;
-  padding-left: 10em;
-  padding-right: 10em;
+  padding: 0 5% 0 5%;
 }
 
 .submenu-item:hover {
