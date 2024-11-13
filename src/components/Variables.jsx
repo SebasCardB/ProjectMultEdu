@@ -4,8 +4,10 @@ import './Variables.css';
 function Variables() {
   return (
     <div className="variables-page">
-
+      <div className="titulo"><h1 >Variable: Lorem</h1></div>
+      
       <main className="variables-content">
+        
         <section className="sidebar2">
           <div className="code-languages">
             <p>&lt;&gt;</p>

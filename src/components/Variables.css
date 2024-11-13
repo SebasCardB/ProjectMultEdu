@@ -6,7 +6,13 @@
     background-color: #f1f1f1;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+  }
+
+  .titulo{
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
   
   .variables-header {
@@ -63,8 +69,9 @@
   
   /* Panel principal */
   .main-panel {
+    height: 65vh;
     width: 80%;
-    padding: 20px;
+    margin-left: 20px;
   }
   
   .operations-panel {
@@ -72,10 +79,11 @@
     align-items: center;
     justify-content: space-around;
     background-color: #ffffff;
-    padding: 20px;
+
     border-radius: 8px;
     border: 2px solid #2d3e50;
     position: relative;
+    height: 100%;
   }
   
   .operation-icon {
@@ -96,7 +104,7 @@
 
   
   .description-section, .examples-section {
-    margin-bottom: 20px;
+    margin: 20px;
   }
   
   .description-section h2, .examples-section h2 {
