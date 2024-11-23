@@ -6,26 +6,14 @@ function Variables() {
     <div className="variables-page">
 
       <main className="variables-content">
-        <section className="sidebar2">
-          <div className="code-languages">
-            <p>&lt;&gt;</p>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JS</p>
-            <p>PHP</p>
-          </div>
-        </section>
-
-        <section className="main-panel">
           <div className="operations-panel">
-            <div className="operation-icon">1</div>
-            <div className="operation-icon">60</div>
-            <div className="operation-icon">A</div>
-            <div className="operation-icon">10s</div>
-            <div className="operation-icon">+2</div>
-            <div className="operation-box">9K</div>
+            {/* Juego de Unity */}
+            <iframe
+              src="/Unity_Game02/index.html"
+              title="Minijuego de Operaciones"
+              className="unity-frame"
+            ></iframe>
           </div>
-        </section>
       </main>
 
 
