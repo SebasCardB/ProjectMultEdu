@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 import React from "react";
 import "./Variables.css";
+=======
+import './Variables.css';
+>>>>>>> Stashed changes
 
 function Variables() {
   return (

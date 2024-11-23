@@ -76,7 +76,7 @@ const Main = () => {
 
         break;
       case 'Suma':
-
+        navigate('/operaciones');  
         break;
       case 'Resta':
 
