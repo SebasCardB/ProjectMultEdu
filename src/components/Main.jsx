@@ -67,25 +67,25 @@ const Main = () => {
     
     switch (item) {
       case 'Variables de tipo numéricas':
-        navigate('/variables');    
+        navigate('/varnum');    
         break;
       case 'Variables de texto':
-
+        navigate('/varbool'); 
         break;
       case 'Variables booleanas':
-
+        navigate('/vartexto'); 
         break;
       case 'Suma':
-        navigate('/operaciones');  
+        navigate('/opsuma');  
         break;
       case 'Resta':
-
+        navigate('/opresta');  
         break;
       case 'Multiplicación':
-
+        navigate('/opmulti');  
         break;
       case 'División':
-  
+        navigate('/opdivi');  
         break;
       case 'Ciclo For':
 
