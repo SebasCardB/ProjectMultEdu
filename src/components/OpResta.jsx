@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import CodeExample from './CodeExample';
 
 function OpResta() {
   const [activeTab, setActiveTab] = useState("text"); // Estado para controlar la pestaña activa
@@ -12,11 +12,17 @@ function OpResta() {
 
       <div className="description-section" >
       <p style={{ textAlign: 'justify' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque est, porta eleifend pulvinar ut, venenatis vitae urna. Curabitur elementum finibus erat et pulvinar. Ut vestibulum, elit eget efficitur vestibulum, neque erat vulputate felis, eu commodo turpis eros vitae nibh. Aenean ullamcorper est nec mattis gravida. Ut et rhoncus lacus. Nunc suscipit sed ligula sit amet lacinia. Etiam tempus turpis cursus mollis facilisis. Vivamus vitae facilisis ipsum, ut consectetur mi. Sed iaculis consectetur neque, eget sagittis metus porttitor sit amet. In hac habitasse platea dictumst. Suspendisse nec rutrum est. Nam ac eros vel tortor rhoncus volutpat nec nec sapien.
-
-        Curabitur in erat mauris. Mauris sit amet interdum augue. Mauris viverra auctor tortor, malesuada gravida velit egestas a. Nulla ac lacus nulla. Sed tempus commodo venenatis. In bibendum justo a ultricies sagittis. Duis ultricies, tellus a porta dictum, nunc tellus pharetra diam, ac lobortis felis quam in est. Etiam venenatis purus aliquet leo aliquam laoreet. Nunc accumsan feugiat augue nec congue. Etiam at diam eget neque pulvinar tempor. Donec mi sem, hendrerit non pellentesque eu, facilisis ut quam. Vestibulum ligula dolor, commodo tincidunt elit quis, consequat tempor diam. Donec posuere urna vitae fermentum luctus. Curabitur luctus dui a ornare gravida.
+      Ahora has aprendido sobre las variables numéricas, de texto y booleanas, estás preparado para avanzar hacia temas más avanzados como 
+      operadores matemáticos, condicionales y bucles. Este conocimiento básico será la base para comprender cómo se toman decisiones y se realiza procesamiento 
+      lógico en los programas de Python.
         </p>
+      <h2>Introducción a las operaciones matemáticas con Python</h2>
+      <p>
+      En este módulo, los estudiantes aprenderán las operaciones matemáticas básicas: suma, resta, multiplicación y división, utilizando variables 
+      numéricas en Python. Este conocimiento es esencial para realizar cálculos en cualquier aplicación.
+      </p>
       </div>
+
 
       {/* Contenedor de pestañas */}
       <div className="tabs">
@@ -50,11 +56,42 @@ function OpResta() {
       <main className="variables-content">
         {activeTab === "text" && (
           <section className="description-section">
-            <h2>¿Qué es Lorem Ipsum?</h2>
+            <h2>¿Qué es la resta?</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+              La resta permite calcular la diferencia entre dos números, respondiendo preguntas como "¿Cuánto queda si quitas un valor a otro?". 
+              En Python, el operador de resta es el signo -.
+            </p>
+            <h2>¿Cómo funciona la resta en Python?</h2>
+            <p>
+              Para realizar una resta, solo necesitas el operarador <b>-</b> entre dos valores o variables.
+              <b>Ejemplo simple:</b>
+              <CodeExample codeString={`
+print(15 - 5)  # Muestra: 10
+              `} language="python" />
+              <b>Usando variables:</b>
+              <CodeExample codeString={`
+a = 20
+b = 5
+resta = a - b
+print("El resultado de la resta es:", resta)  # Muestra: 15
+              `} language="python" />
+              <b>Con más de dos valores:</b>
+              <CodeExample codeString={`
+a = 50
+b = 20
+c = 10
+
+resultado = a - b - c
+print("El resultado es:", resultado)  # Muestra: 20
+              `} language="python" />
+            </p>
+            <h2>Aplicaciones de la resta</h2>
+            <p>
+              <ul>
+                <li><b>Finanzas: </b>calcular el dinero restante después de un gasto.</li>
+                <li><b>Logística: </b>Determinar la diferencia entre el inventario inicial y las ventas.</li>
+                <li><b>Cálculos personales: </b>Calcular cuántos días faltan para una fecha específica. </li>
+              </ul>
             </p>
           </section>
         )}
@@ -68,11 +105,26 @@ function OpResta() {
         )}
         {activeTab === "examples" && (
           <section className="examples-section">
-            <h2>Ejemplos de Lorem Ipsum</h2>
+            <h2>Ejemplo práctico</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            Supongamos que estás planeando un viaje y quieres saber cuánto dinero te quedará después de los gastos.
+            <CodeExample codeString={`
+presupuesto = 1000.0
+gastos_transporte = 200.0
+gastos_comida = 150.0
+
+dinero_restante = presupuesto - gastos_transporte - gastos_comida
+print("Dinero restante:", dinero_restante)  # Muestra: 650.0
+              `} language="python" />
+            </p>
+            <h2>Actividad práctica</h2>
+            <p>
+            Crea un programa que:
+            <ol>
+              <li>Solicite al usuario su presupuesto inicial.</li>
+              <li>Solicite el monto de un gasto.</li>
+              <li>Calcule cuánto dinero queda y lo muestre.</li>
+            </ol>
             </p>
           </section>
         )}

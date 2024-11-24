@@ -146,7 +146,7 @@ const Main = () => {
               ))}
             </div>
           ) : (
-            <p>¡Bienvenido Mundo!</p>
+            <p className="bienvenida">¡Bienvenido Mundo!</p>
           )}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import CodeExample from './CodeExample';
 
 function VarTexto() {
   const [activeTab, setActiveTab] = useState("text"); // Estado para controlar la pestaña activa
@@ -11,11 +11,38 @@ function VarTexto() {
       </div>
 
       <div className="description-section" >
-      <p style={{ textAlign: 'justify' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque est, porta eleifend pulvinar ut, venenatis vitae urna. Curabitur elementum finibus erat et pulvinar. Ut vestibulum, elit eget efficitur vestibulum, neque erat vulputate felis, eu commodo turpis eros vitae nibh. Aenean ullamcorper est nec mattis gravida. Ut et rhoncus lacus. Nunc suscipit sed ligula sit amet lacinia. Etiam tempus turpis cursus mollis facilisis. Vivamus vitae facilisis ipsum, ut consectetur mi. Sed iaculis consectetur neque, eget sagittis metus porttitor sit amet. In hac habitasse platea dictumst. Suspendisse nec rutrum est. Nam ac eros vel tortor rhoncus volutpat nec nec sapien.
 
-        Curabitur in erat mauris. Mauris sit amet interdum augue. Mauris viverra auctor tortor, malesuada gravida velit egestas a. Nulla ac lacus nulla. Sed tempus commodo venenatis. In bibendum justo a ultricies sagittis. Duis ultricies, tellus a porta dictum, nunc tellus pharetra diam, ac lobortis felis quam in est. Etiam venenatis purus aliquet leo aliquam laoreet. Nunc accumsan feugiat augue nec congue. Etiam at diam eget neque pulvinar tempor. Donec mi sem, hendrerit non pellentesque eu, facilisis ut quam. Vestibulum ligula dolor, commodo tincidunt elit quis, consequat tempor diam. Donec posuere urna vitae fermentum luctus. Curabitur luctus dui a ornare gravida.
-        </p>
+        <p style={{ textAlign: 'justify' }}>
+        Este módulo tiene como objetivo introducir a los estudiantes al concepto de variables de manera progresiva, 
+        con explicaciones detalladas y actividades prácticas que les permitan comprender su uso básico en programación. 
+        Cada tema está diseñado para ser un prerequisito del siguiente, asegurando una comprensión lineal y sólida.
+          </p>
+
+        <h2>¿Qué son las variables en programación?</h2>
+
+        <p style={{ textAlign: 'justify' }}>
+        Las variables son contenedores de datos que permiten almacenar información en un programa. 
+        En Python, una variable puede contener diferentes tipos de datos, como números, texto, valores booleanos, entre otros. 
+        Esto hace que sean fundamentales para crear cualquier tipo de aplicación.
+          </p>
+
+        <p style={{ textAlign: 'justify' }}>
+        Un ejemplo cotidiano sería imaginar una variable como una "caja" con una etiqueta (el nombre de la variable) 
+        que guarda un valor. <b>Por ejemplo:</b>
+
+        <ul>
+          <li><b>Nombre de la caja:</b>     Edad</li>
+          <li><b>Contenido de la caja:</b>  25</li>
+        </ul>
+
+          </p>
+
+
+        <p style={{ textAlign: 'justify' }}>
+        En Python, no necesitas declarar el tipo de dato explícitamente. Esto significa que, si colocas un número en una variable, 
+        Python automáticamente sabe que es un número.
+          </p>
+
       </div>
 
       {/* Contenedor de pestañas */}
@@ -50,12 +77,54 @@ function VarTexto() {
       <main className="variables-content">
         {activeTab === "text" && (
           <section className="description-section">
-            <h2>¿Qué es Lorem Ipsum?</h2>
+            <h2>¿Qué son las variables de texto?</h2>
+
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            Las variables de texto, o strings, almacenan cadenas de caracteres, como palabras, frases o incluso símbolos. 
+            Estas cadenas siempre están rodeadas por comillas:
+            <ul>
+              <li><b>Simples: </b>'Hola'</li>
+              <li><b>Dobles: </b>"Mundo"</li>
+            </ul>
+            <b>Ejemplo básico:</b>
+            <CodeExample codeString={`
+mensaje = "Hola, mundo"
+              `} language="python" />
             </p>
+            
+
+            <h2>¿Qué hacen las variables de texto?</h2>
+            <p>Las cadenas de texto son fundamentales para mostrar mensajes, procesar nombres de usuarios, escribir descripciones y mucho más. <b>Por ejemplo:</b>
+            <CodeExample codeString={`
+nombre = "Ana"
+print("Hola, " + nombre)  # Muestra: Hola, Ana
+              `} language="python" />
+            </p>
+          
+            <h2>Cómo se usan las variables de texto</h2>
+            <h1>a) Creación de strings</h1>
+            
+            <p>
+            <CodeExample codeString={`
+frase = "Aprender Python es divertido"
+              `} language="python" />
+              Los strings se crean asignando texto a una variable:</p>
+            <h1>b) Concatenación de cadenas</h1>
+            <p>Puedes unir strings con el operador +:
+            <CodeExample codeString={`
+nombre = "Luis"
+saludo = "Hola, " + nombre
+print(saludo)  # Muestra: Hola, Luis
+              `} language="python" />
+            </p>
+            
+            <h1>c) Manejo de comillas dentro de cadenas</h1>
+            <p>Usa comillas dobles si tu string contiene comillas simples:
+            <CodeExample codeString={`
+frase = "Es un 'gran' día"
+              `} language="python" />
+            </p>
+            
           </section>
         )}
         {activeTab === "videos" && (
@@ -68,12 +137,26 @@ function VarTexto() {
         )}
         {activeTab === "examples" && (
           <section className="examples-section">
-            <h2>Ejemplos de Lorem Ipsum</h2>
+            <h2>Ejemplo práctico</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            Supongamos que quieres crear un saludo personalizado:
+            <CodeExample codeString={`
+nombre = "Carlos"
+mensaje = "Hola, " + nombre + ". ¡Bienvenido a Python!"
+print(mensaje) #Salida: Hola, Carlos. ¡Bienvenido a Python!
+              `} language="python" />
             </p>
+            
+            <h2>Actividad práctica</h2>
+            <p>
+              Escribe un programa que:
+              <ol>
+                <li>Guarde tu nombre en una variable.</li>
+                <li>Cree un mensaje como: "Hola, [tu nombre], ¿cómo estás?"</li>
+                <li>Imprima el mensaje.</li>
+              </ol>
+            </p>
+
           </section>
         )}
         {activeTab === "game" && (

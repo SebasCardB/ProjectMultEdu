@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CodeExample from './CodeExample';
 
 
 function OpSuma() {
@@ -12,10 +13,15 @@ function OpSuma() {
 
       <div className="description-section" >
       <p style={{ textAlign: 'justify' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque est, porta eleifend pulvinar ut, venenatis vitae urna. Curabitur elementum finibus erat et pulvinar. Ut vestibulum, elit eget efficitur vestibulum, neque erat vulputate felis, eu commodo turpis eros vitae nibh. Aenean ullamcorper est nec mattis gravida. Ut et rhoncus lacus. Nunc suscipit sed ligula sit amet lacinia. Etiam tempus turpis cursus mollis facilisis. Vivamus vitae facilisis ipsum, ut consectetur mi. Sed iaculis consectetur neque, eget sagittis metus porttitor sit amet. In hac habitasse platea dictumst. Suspendisse nec rutrum est. Nam ac eros vel tortor rhoncus volutpat nec nec sapien.
-
-        Curabitur in erat mauris. Mauris sit amet interdum augue. Mauris viverra auctor tortor, malesuada gravida velit egestas a. Nulla ac lacus nulla. Sed tempus commodo venenatis. In bibendum justo a ultricies sagittis. Duis ultricies, tellus a porta dictum, nunc tellus pharetra diam, ac lobortis felis quam in est. Etiam venenatis purus aliquet leo aliquam laoreet. Nunc accumsan feugiat augue nec congue. Etiam at diam eget neque pulvinar tempor. Donec mi sem, hendrerit non pellentesque eu, facilisis ut quam. Vestibulum ligula dolor, commodo tincidunt elit quis, consequat tempor diam. Donec posuere urna vitae fermentum luctus. Curabitur luctus dui a ornare gravida.
+      Ahora has aprendido sobre las variables numéricas, de texto y booleanas, estás preparado para avanzar hacia temas más avanzados como 
+      operadores matemáticos, condicionales y bucles. Este conocimiento básico será la base para comprender cómo se toman decisiones y se realiza procesamiento 
+      lógico en los programas de Python.
         </p>
+      <h2>Introducción a las operaciones matemáticas con Python</h2>
+      <p>
+      En este módulo, los estudiantes aprenderán las operaciones matemáticas básicas: suma, resta, multiplicación y división, utilizando variables 
+      numéricas en Python. Este conocimiento es esencial para realizar cálculos en cualquier aplicación.
+      </p>
       </div>
 
       {/* Contenedor de pestañas */}
@@ -50,11 +56,28 @@ function OpSuma() {
       <main className="variables-content">
         {activeTab === "text" && (
           <section className="description-section">
-            <h2>¿Qué es Lorem Ipsum?</h2>
+            <h2>¿Qué es la suma en python?</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            La suma es una operación matemática que permite combinar dos o más valores para obtener un resultado. En Python, el operador para sumar es el signo +.
+            Para almacenar los resultados de una suma normalmente se puede usar una variable.
+            </p>
+            <h3>Sintaxis básica</h3>
+            <p>
+              Para sumar dos números en Python:
+              <CodeExample codeString={`
+# Suma de dos números
+resultado = 5 + 3
+print(resultado)  # Muestra: 8
+              `} language="python" />
+
+              Si usamos variables, el código es similar. Simplemente las sumamos.
+
+              <CodeExample codeString={`
+a = 10
+b = 20
+suma = a + b
+print("El resultado de la suma es:", suma)  # Muestra: 30
+              `} language="python" />
             </p>
           </section>
         )}
@@ -68,11 +91,32 @@ function OpSuma() {
         )}
         {activeTab === "examples" && (
           <section className="examples-section">
-            <h2>Ejemplos de Lorem Ipsum</h2>
+            <h2>Ejemplo práctico</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+              Imagina que necesitas calcular el total de un carrito de compras. Puedes sumar los precios de los artículos así:
+              <CodeExample codeString={`
+precio1 = 15.5
+precio2 = 20.0
+precio3 = 12.75
+
+total = precio1 + precio2 + precio3
+print("El total a pagar es:", total)  # Muestra: 48.25
+              `} language="python" />
+            </p>
+            <h2>Actividad práctica</h2>
+            <p>
+            Crea un programa que:
+            <ol>
+              <li>Solicite al usuario dos numeros</li>
+              <li>Calcule su <b>suma</b></li>
+              <li>Imprima su resultado</li>
+            </ol>
+            <b>Nota: </b>Para solicitar datos al usuario en el punto 1 de este ejercicio, te mostramos este ejemplo:
+            <CodeExample codeString={`
+# Solicitar números al usuario
+numero1 = float(input("Introduce el primer número: "))
+numero2 = float(input("Introduce el segundo número: "))
+              `} language="python" />
             </p>
           </section>
         )}

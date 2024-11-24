@@ -28,6 +28,12 @@
   border-radius:20px;
 }
 
+.bienvenida{
+  color: #1d3557;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
 .menu-button {
   background-color: #1d3557;
   color: #FFE98B;
@@ -53,7 +59,7 @@
 
 /* Estilo del botón activo */
 .menu-button.active {
-  background-color: #2A4D6E; /* Color de fondo cuando está activo */
+  background-color: #396c9b; /* Color de fondo cuando está activo */
   border: 2px solid #ffee8b; /* Borde adicional para resaltar */
 }
 
@@ -120,7 +126,7 @@
 }
 
 .submenu-item:hover {
-  background-color: #457b9d;
+  background-color: #396c9b;
 }
 
 .submenu-text {

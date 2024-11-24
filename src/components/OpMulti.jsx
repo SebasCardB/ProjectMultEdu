@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import CodeExample from './CodeExample';
+
 
 
 function OpMulti() {
@@ -12,10 +14,15 @@ function OpMulti() {
 
       <div className="description-section" >
       <p style={{ textAlign: 'justify' }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque est, porta eleifend pulvinar ut, venenatis vitae urna. Curabitur elementum finibus erat et pulvinar. Ut vestibulum, elit eget efficitur vestibulum, neque erat vulputate felis, eu commodo turpis eros vitae nibh. Aenean ullamcorper est nec mattis gravida. Ut et rhoncus lacus. Nunc suscipit sed ligula sit amet lacinia. Etiam tempus turpis cursus mollis facilisis. Vivamus vitae facilisis ipsum, ut consectetur mi. Sed iaculis consectetur neque, eget sagittis metus porttitor sit amet. In hac habitasse platea dictumst. Suspendisse nec rutrum est. Nam ac eros vel tortor rhoncus volutpat nec nec sapien.
-
-        Curabitur in erat mauris. Mauris sit amet interdum augue. Mauris viverra auctor tortor, malesuada gravida velit egestas a. Nulla ac lacus nulla. Sed tempus commodo venenatis. In bibendum justo a ultricies sagittis. Duis ultricies, tellus a porta dictum, nunc tellus pharetra diam, ac lobortis felis quam in est. Etiam venenatis purus aliquet leo aliquam laoreet. Nunc accumsan feugiat augue nec congue. Etiam at diam eget neque pulvinar tempor. Donec mi sem, hendrerit non pellentesque eu, facilisis ut quam. Vestibulum ligula dolor, commodo tincidunt elit quis, consequat tempor diam. Donec posuere urna vitae fermentum luctus. Curabitur luctus dui a ornare gravida.
+      Ahora has aprendido sobre las variables numéricas, de texto y booleanas, estás preparado para avanzar hacia temas más avanzados como 
+      operadores matemáticos, condicionales y bucles. Este conocimiento básico será la base para comprender cómo se toman decisiones y se realiza procesamiento 
+      lógico en los programas de Python.
         </p>
+      <h2>Introducción a las operaciones matemáticas con Python</h2>
+      <p>
+      En este módulo, los estudiantes aprenderán las operaciones matemáticas básicas: suma, resta, multiplicación y división, utilizando variables 
+      numéricas en Python. Este conocimiento es esencial para realizar cálculos en cualquier aplicación.
+      </p>
       </div>
 
       {/* Contenedor de pestañas */}
@@ -50,11 +57,31 @@ function OpMulti() {
       <main className="variables-content">
         {activeTab === "text" && (
           <section className="description-section">
-            <h2>¿Qué es Lorem Ipsum?</h2>
+            <h2>¿Qué es la multiplicación</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            La multiplicación <b>permite calcular el producto de dos números</b>, o cuántas veces un valor contiene a otro. <b>En Python, se utiliza el operador *</b>.
+            </p>
+            <h2>¿Como funciona la multiplicación en Python?</h2>
+            <p>
+              La sintaxis básica para la multiplicación es sencilla:
+              <CodeExample codeString={`
+print(4 * 5)  # Muestra: 20
+              `} language="python" />
+              <b>Con variables:</b>
+              <CodeExample codeString={`
+a = 3
+b = 7
+resultado = a * b
+print("El producto es:", resultado)  # Muestra: 21
+              `} language="python" />
+            </p>
+            <h2>Aplicaciones de la multiplicación</h2>
+            <p>
+              <ul>
+                <li><b>Negocios: </b>Calcular el precio total de productos comprados.</li>
+                <li><b>Cálculos físicos: </b>Determinar áreas, volúmenes o distancias.</li>
+                <li><b>Matemáticas: </b> Resolveer problemas de escalas y proporciones.</li>
+              </ul>
             </p>
           </section>
         )}
@@ -68,11 +95,24 @@ function OpMulti() {
         )}
         {activeTab === "examples" && (
           <section className="examples-section">
-            <h2>Ejemplos de Lorem Ipsum</h2>
+            <h2>Ejemplo práctico</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a gravida justo.
-              Curabitur eu tristique felis, eget hendrerit augue. Nulla ut condimentum eros.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus...
+            Supongamos que necesitas calcular cuántos panes puedes hornear con cierta cantidad de ingredientes.
+            <CodeExample codeString={`
+cantidad_harina = 2.5  # Harina en kilogramos
+panes_por_kg = 4
+
+total_panes = cantidad_harina * panes_por_kg
+print("Puedes hornear:", total_panes, "panes.")  # Muestra: 10
+              `} language="python" />
+            </p>
+            <h2>Actividad práctica</h2>
+            <p>Escribe un programa que:
+              <ol>
+                <li>Solicite al usuario el precio de un artículo.</li>
+                <li>Pregunte cuántos artículos quiere comprar.</li>
+                <li>Calcule y muestre el costo total.</li>
+              </ol>
             </p>
           </section>
         )}

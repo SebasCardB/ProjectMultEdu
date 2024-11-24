@@ -73,13 +73,18 @@
 }
 
 .description-section h2, .examples-section h2, .videos-section h2, .game-section h2{
-  font-size: 20px;
-  color: #333;
+  font-size: 25px;
+  color: #1e61a0;
   margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.description-section h3, .examples-section h3, .videos-section h3, .game-section h3{
+  font-size: 22px;
 }
 
 .description-section p, .examples-section p, .videos-section p, .game-section p{
-  font-size: 16px;
+  font-size: 20px;
   color: #555;
   line-height: 1.6;
 }
@@ -132,6 +137,7 @@
   font-size: 16px;
   border: 2px solid #0d3b66;
   border-top: none;
+  padding-left: 20%; padding-right: 20%;
 }
 
 /* Responsividad */
