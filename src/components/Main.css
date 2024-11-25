@@ -143,3 +143,17 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+
+.minijuego-highlight {
+  background-color: #2A4D6E;
+
+  border: 4px solid #ffee8b; 
+  
+}
+
+.minijuego-highlight:hover {
+  transition: 0.5s;
+  background-color: #39989b; /* Color para el estado hover */
+  
+}
