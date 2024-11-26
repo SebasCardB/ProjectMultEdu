@@ -1,0 +1,73 @@
+.Minijuego-page {
+  display: flex;
+  flex-direction: column;
+
+  font-family: Arial, sans-serif;
+
+  color: #333;
+  margin: 0;
+  padding: 0px;
+}
+
+.title-game{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.game-section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-section h2{
+  font-size: 25px;
+  color: #1e61a0;
+  margin-bottom: 10px;
+
+}
+
+/* Responsividad */
+@media (max-width: 1400px) {
+  .operations-panel {
+    height: 500px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .operations-panel {
+    height: 470px;
+    width: 90%;
+  }
+}
+
+.mini-button {  
+  background-color: #1d3557;
+  color: #FFE98B;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:10px;
+  transition: background-color 0.3s;
+  align-items: center;
+  border: 2px solid #1d3557; /* Borde adicional para resaltar */
+  width: 102px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 50px;
+}
+
+.unity-frame {
+  width: 70%;
+  height: 70%;
+  border: none;
+  aspect-ratio: 16/9;
+}

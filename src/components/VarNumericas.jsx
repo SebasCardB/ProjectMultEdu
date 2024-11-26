@@ -65,12 +65,6 @@ function VarNumericas() {
         >
           Videos
         </button>
-        <button
-          className={`tab ${activeTab === "game" ? "active" : ""}`}
-          onClick={() => setActiveTab("game")}
-        >
-          Minijuego
-        </button>
       </div>
 
       {/* Contenido dinámico basado en pestañas */}
@@ -170,10 +164,21 @@ edad_usuario = 26  # Ahora la variable contiene el valor 26
         )}
         {activeTab === "videos" && (
           <section className="videos-section">
-            <h2>Videos relacionados</h2>
-            <p>
-              Aquí puedes agregar contenido relacionado con videos sobre variables numéricas.
-            </p>
+          <h2>Videos relacionados</h2>
+          <h3>¿Qué es una variable?</h3>
+
+          <div class="Videos">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lMgLkjXpfAQ?si=dVQelQGOg0fMYVMq&start=18&end=100" title="Operaciones Matemáticas en Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+          <h3>Tipos de variables</h3>
+          <div class="Videos">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ERIzuf3kGv8?si=RWAZ55dfhQBdcKvt" title="Operaciones Matemáticas en Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h3>Variables Numericas</h3>
+          <div class="Videos">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vMbvum1CSXI?si=PC0k7hrT2lfcpSR-" title="Operaciones Matemáticas en Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
           </section>
         )}
         {activeTab === "examples" && (
@@ -201,18 +206,6 @@ print("Y mido:", altura_metros) # Salida: 1.75
                 <li>Imprima ambas variables.</li>
               </ul>
             </p>
-          </section>
-        )}
-        {activeTab === "game" && (
-          <section className="game-section">
-            <h2>Minijuego</h2>
-            <div className="operations-panel">
-              <iframe
-                src="/Unity_Game01/index.html"
-                title="Minijuego de Variables"
-                className="unity-frame"
-              ></iframe>
-            </div>
           </section>
         )}
       </main>

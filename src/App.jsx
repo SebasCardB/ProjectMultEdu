@@ -15,6 +15,9 @@ import OpSuma from './components/OpSuma';
 import OpResta from './components/OpResta';
 import OpMulti from './components/OpMulti';
 import OpDivi from './components/OpDivi';
+import Proximamente from './components/Proximamente';
+import MinijuegoVariables from './components/MiniVariables';
+import MinijuegoOperaciones from './components/MiniOperaciones';
 
 const App = () => {
   return (
@@ -32,6 +35,11 @@ const App = () => {
           <Route path='/opresta' element={<OpResta/>}/>
           <Route path='/opmulti' element={<OpMulti/>}/>
           <Route path='/opdivi' element={<OpDivi/>}/>
+
+          <Route path='/proximamente' element={<Proximamente/>}/>
+
+          <Route path='/minivar' element={<MinijuegoVariables/>}/>
+          <Route path='/miniop' element={<MinijuegoOperaciones/>}/>
         </Routes>
 
       </BrowserRouter>

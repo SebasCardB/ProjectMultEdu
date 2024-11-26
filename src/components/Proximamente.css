@@ -1,0 +1,52 @@
+.proximamente-page {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content-proximamente {
+  width: 80%;
+  padding: 20px;
+  background-color: #cbdcf7;
+  border: 5px solid #0d3b66;
+  border-radius: 50px;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+}
+
+.content-proximamente h1 {
+  color: #1d3557;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 0em;
+}
+
+.prox-button {  
+  background-color: #1d3557;
+  color: #FFE98B;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:10px;
+  transition: background-color 0.3s;
+  align-items: center;
+  border: 2px solid #1d3557; /* Borde adicional para resaltar */
+  width: 102px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.button-proximamente{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 80%;
+}

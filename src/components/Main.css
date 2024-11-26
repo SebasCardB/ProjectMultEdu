@@ -28,11 +28,6 @@
   border-radius:20px;
 }
 
-.bienvenida{
-  color: #1d3557;
-  font-weight: bolder;
-  font-size: 50px;
-}
 
 .menu-button {
   background-color: #1d3557;
@@ -83,7 +78,7 @@
 }
 
 .content {
-  flex-grow: 1;
+  width: 70%;
   padding: 20px;
   background-color: #cbdcf7;
   border: 5px solid #0d3b66;
@@ -95,7 +90,6 @@
 }
 
 .submenu {
-  background-color: #cbdcf7;
   padding: 20px;
   border-radius: 15px;
   position: relative;
@@ -118,7 +112,7 @@
   border-radius: 20px;
   width: 40%;
   transition: background-color 0.3s;
-  height: 8em;
+  height: 6em;
   display: flex; /* Para alinear el texto y el ícono en la misma línea */
   align-items: center;
   justify-content: space-between;
@@ -135,25 +129,129 @@
 
 .close-button {
   position:fixed;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
   color: #1d3557;
   font-size: 20px;
   cursor: pointer;
+  z-index: 3;
 }
 
 
 .minijuego-highlight {
   background-color: #2A4D6E;
-
   border: 4px solid #ffee8b; 
-  
 }
 
 .minijuego-highlight:hover {
   transition: 0.5s;
   background-color: #39989b; /* Color para el estado hover */
   
+}
+
+.content-initial {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+  margin:0 50px 0 50px;
+}
+
+.subcontent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+.subcontent h1{
+  color: #1d3557;
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 0em;
+}
+
+.subcontent h2{
+  color: #1d3557;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.subcontent p{
+  color: #000000;
+  font-size: 20px;
+  margin: 0 15% 0 15%;
+}
+
+
+.main-logo {
+  width: 20%; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantén la proporción */
+  display: block; /* Asegura que la imagen sea visible */
+}
+
+/* Para navegadores basados en WebKit (Chrome, Safari) */
+.content-main::-webkit-scrollbar {
+  display: none;
+}
+
+.navigation-button {  
+  background-color: #1d3557;
+  color: #FFE98B;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:10px;
+  transition: background-color 0.3s;
+  align-items: center;
+  border: 2px solid #1d3557; /* Borde adicional para resaltar */
+  width: 102px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navigation-button:hover {
+  background-color: #396c9b;
+}
+
+.content-main {
+  padding: 20px;
+  text-align: center;
+}
+
+.buttons-nextprev{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+/* Indicadores */
+.indicators {
+  display: flex;
+  gap: 5px;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  border: 1px solid #1d3557; /* Borde adicional para resaltar */
+}
+
+.indicator.active {
+  background-color: #1d3557;
 }

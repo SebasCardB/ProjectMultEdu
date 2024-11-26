@@ -44,12 +44,6 @@ function OpSuma() {
         >
           Videos
         </button>
-        <button
-          className={`tab ${activeTab === "game" ? "active" : ""}`}
-          onClick={() => setActiveTab("game")}
-        >
-          Minijuego
-        </button>
       </div>
 
       {/* Contenido dinámico basado en pestañas */}
@@ -84,9 +78,15 @@ print("El resultado de la suma es:", suma)  # Muestra: 30
         {activeTab === "videos" && (
           <section className="videos-section">
             <h2>Videos relacionados</h2>
-            <p>
-              Aquí puedes agregar contenido relacionado con videos sobre variables numéricas.
-            </p>
+            <h3>Operaciones Básicas Python</h3>
+
+            <div class="Videos">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qEHoh9-uiY0?si=V2t7osdO-GPGHx8A" title="Operaciones Matemáticas en Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <h3>Operaciones: Suma</h3>
+            <div class="Videos">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NRX6KvEP-u8?si=q1IkiA2zn51LVnmR&start=15&end=30" title="Operaciones Matemáticas en Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
           </section>
         )}
         {activeTab === "examples" && (
@@ -118,18 +118,6 @@ numero1 = float(input("Introduce el primer número: "))
 numero2 = float(input("Introduce el segundo número: "))
               `} language="python" />
             </p>
-          </section>
-        )}
-        {activeTab === "game" && (
-          <section className="game-section">
-            <h2>Minijuego</h2>
-            <div className="operations-panel">
-              <iframe
-                src="/Unity_Game01/index.html"
-                title="Minijuego de Variables"
-                className="unity-frame"
-              ></iframe>
-            </div>
           </section>
         )}
       </main>
